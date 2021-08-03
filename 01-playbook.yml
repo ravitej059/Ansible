@@ -1,7 +1,7 @@
--name: Demo on playbook
+-name: Demo on Playbook
 -hosts: all
 -tasks:
-  -name: print hello world
+  -name: print Hello world
     debug: #{ msg: "Hello World" }
     msg: Hello world
 
