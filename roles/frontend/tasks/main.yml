@@ -1,3 +1,5 @@
-- name: Print Component Name
-  debug:
-    msg: Componenet = Frontend
+- name: Install Nginx
+  yum:
+    name: nginx
+    state: present
+
