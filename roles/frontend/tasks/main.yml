@@ -1,3 +1,3 @@
 - name: Print Component Name
   debug:
-    msg:Componenet = Frontend
+    msg: Componenet = Frontend

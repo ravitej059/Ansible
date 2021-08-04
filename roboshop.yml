@@ -1,8 +1,5 @@
-- name: Setup roboshop project -- Frontend Component
+- name: Setup roboshop project
   hosts: FRONTEND
-  become: yes
-  tags:
-    - frontend
   roles:
     - name: Load Frontend Role
       role: frontend
