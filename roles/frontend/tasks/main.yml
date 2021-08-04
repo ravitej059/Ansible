@@ -8,6 +8,12 @@
     path: /usr/share/nginx/html
     state: absent
 
+- name: Start Nignx
+  ansible.builtin.systemd:
+    state: started
+    name: nginx
+    enabled: yes
+
 - name: Extract Package
   ansible.builtin.unarchive:
     src: https://github.com/roboshop-devops-project/frontend/archive/main.zip
