@@ -3,7 +3,7 @@
     name: nginx
     state: present
 
-- name: Remobve old htdocs directory
+- name: Remove old htdocs directory
   ansible.builtin.file:
     path: /usr/share/nginx/html
     state: absent
