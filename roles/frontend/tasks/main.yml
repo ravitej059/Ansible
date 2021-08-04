@@ -1,6 +1,7 @@
 - name: Install Nginx
   yum:
     name: nginx
+    update_cache: yes
     state: present
 
 - name: Remove old htdocs directory
