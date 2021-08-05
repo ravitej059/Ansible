@@ -22,7 +22,7 @@
     src: roboshop.conf
     dest: /etc/nginx/default.d/roboshop.conf
 
-- name: Start NGiNX
+- name: reStart NGiNX
      service:
        name: nginx
        state: started
