@@ -1,4 +1,10 @@
-- name: Print Component Name
-  debug:
-    msg:Componenet = Mongodb
+- name: Adding mongoDB repositories
+  yum_repository:
+    name: MongoDB
+    description: EPEL YUM repo
+    baseurl: https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/4.2/x86_64/
+    gpgcheck: yes
+    enabled: yes
+    gpgkey: https://www.mongodb.org/static/pgp/server-4.2.asc
+    file: mongodbb
     
