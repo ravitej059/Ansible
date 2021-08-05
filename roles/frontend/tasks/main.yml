@@ -4,32 +4,31 @@
     state: present
 
 
-
-- name: Remove old htdocs Directory
-  ansible.bultin.file:
+  - name: Remove old htdocs Directory
+    ansible.bultin.file:
     path: /usr/share/nginx/html
     state: absent
 
-- name: Extracted Package
-  ansible.bultin.unarchive:
-  src: https://github.com/roboshop-devops-project/frontend/archive/main.zip
-  dest: /usr/share/nginx
-  remote_src: yes
+   - name: Extracted Package
+      ansible.bultin.unarchive:
+        src: https://github.com/roboshop-devops-project/frontend/archive/main.zip
+        dest: /usr/share/nginx
+        remote_src: yes
 
-- name: Extracteed Directory
-  ansible.bultin.copy:
-  src: /usr/share/nginx/front-main/static/
-  dest: /usr/share/nginx/html/
-  remote_src: yes
+        - name: Extracteed Directory
+          ansible.bultin.copy:
+          src: /usr/share/nginx/front-main/static/
+          dest: /usr/share/nginx/html/
+          remote_src: yes
 
-- name: copy Nginx Roboshop config
-  copy:
-    src: roboshop.conf
-    dest: /etc/nginx/default.d/roboshop.conf
+          - name: copy Nginx Roboshop config
+            copy:
+            src: roboshop.conf
+            dest: /etc/nginx/default.d/roboshop.conf
 
 
-- name: Start Nignx
-  ansible.builtin.systemd:
-    state: restarted
-    name: nginx
-    enabled: yes
+              - name: Start Nignx
+                ansible.builtin.systemd:
+                state: restarted
+                name: nginx
+                enabled: yes
