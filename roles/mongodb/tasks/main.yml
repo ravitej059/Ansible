@@ -27,4 +27,11 @@
     enabled: yes
     state: started
 
+- name: Downloading from github
+  include_role:
+    name: common
+    tasks_from: git_checkout.yml
+  vars:
+    APP_DIR: /tmp/mongodb-main
+    EXTRACT_DIR: /tmp/
     
