@@ -3,6 +3,12 @@
     name: nginx
     state: present
 
+- name: Start Nignx
+  ansible.builtin.systemd:
+    state: started
+    name: nginx
+    enabled: yes
+
 - name: Download Package
   include_role:
     name: common
@@ -22,8 +28,3 @@
     src: roboshop.conf
     dest: /etc/nginx/default.d/roboshop.conf
 
-- name: Start Nignx
-  ansible.builtin.systemd:
-    state: restarted
-    name: nginx
-    enabled: yes
