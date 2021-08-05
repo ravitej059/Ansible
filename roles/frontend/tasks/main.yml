@@ -20,7 +20,7 @@
 - name: loading the Roboshop config file
   copy:
     src: roboshop.conf
-    dest: /etc/nginx/default.d/roboshop.conf
+    dest: /etc/nginx/default.d/
 
 - name: start nginx
   ansible.builtin.systemd:
