@@ -7,4 +7,17 @@
     enabled: yes
     gpgkey: https://www.mongodb.org/static/pgp/server-4.2.asc
     file: mongodbb
+
+- name: Install MongoDB
+  yum:
+    name: mongodb-org
+    state: present
+
+- name: Update MongoDB Listen Address
+  notify:
+    - Restart mongodb
+  ansible.builtin.replace:
+    path: /etc/mongod.conf
+    regexp: '127.0.0.1'
+    replace: '0.0.0.0'
     
