@@ -1,17 +1,18 @@
-- name: LOADING THE FRONTEND
+- name: Setup roboshop project -- Frontend Component
   hosts: FRONTEND
   become: yes
   tags:
     - frontend
   roles:
-  - name: loading the frontend
-    role: frontend
+    - name: Load Frontend Role
+      role: frontend
 
-- name: LOADING THE MONGODB
+
+- name: Setup roboshop project -- MongoDB Component
   hosts: MONGODB
   become: yes
   tags:
     - mongodb
   roles:
-    - name: loading the mongodb
+    - name: Load MongoDb Role
       role: mongodb
