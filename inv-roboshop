@@ -2,8 +2,8 @@
 frontend.roboshop.internal
 [MONGODB]
 mongodb.roboshop.internal
-[CATALOUGE]
-catlaogue.roboshop.internal
+[CATALOGUE]
+catalogue.roboshop.internal
 [REDIS]
 redis.roboshop.internal
 [USER]
