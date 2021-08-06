@@ -6,7 +6,7 @@
 - name: Download Package
   include_role:
     name: common
-    tasks_from: download-from-github
+    tasks_from: from-github
   vars:
     APP_DIR: /usr/share/nginx/html
     EXTRACT_DIR: /usr/share/nginx
