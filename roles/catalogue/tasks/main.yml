@@ -7,8 +7,8 @@
       - state: Installed
 
 - name: Add Roboshop User
-  ansible.bultin.user:
-    name: Robohsop
+  ansible.builtin.user:
+    name: robohsop
     comment: Roboshop Project User
 
 
