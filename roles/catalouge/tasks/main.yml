@@ -1,4 +1,22 @@
-- name: Print Component Name
-  debug:
-    msg:Componenet = Frontend
-    
+- nmae: Install NodeJS
+  yum:
+    name:
+      - nodejs
+      - make
+      - gcc-c++
+      - state: Installed
+
+- name: Add Roboshop User
+  ansible.bultin.user:
+    name: roboshop
+    comment: Roboshop Project User
+
+
+- name: Download Pckage
+  include_role:
+    name: common
+    tasks_from: from-github
+    vars:
+      APP_DIR: /home/roboshop/catalogue
+      EXTRACT_DIR: /home/roboshop
+

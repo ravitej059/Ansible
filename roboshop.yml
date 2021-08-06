@@ -16,3 +16,13 @@
   roles:
     - name: Load MongoDb Role
       role: mongodb
+
+
+- name: Setup roboshop project -- Catalogue Component
+  hosts: CATALOGUE
+  become: yes
+  tags:
+    - mongodb
+  roles:
+    - name: Load CATALOGUE Role
+      role: catalogue
