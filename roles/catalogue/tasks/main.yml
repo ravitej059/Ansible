@@ -1,4 +1,4 @@
-- nmae: Install NodeJS
+- name: Install NodeJS
   yum:
     name:
       - nodejs
