@@ -22,7 +22,7 @@
   hosts: CATALOGUE
   become: yes
   tags:
-    - mongodb
+    - catalogue
   roles:
     - name: Load CATALOGUE Role
       role: catalogue
