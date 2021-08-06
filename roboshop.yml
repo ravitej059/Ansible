@@ -24,5 +24,5 @@
   tags:
     - mongodb
   roles:
-    - name: Load CATALOGUE Role
+    - name: Load catalogue Role
       role: catalogue
