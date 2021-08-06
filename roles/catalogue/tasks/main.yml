@@ -16,6 +16,7 @@
   include_role:
     name: common
     tasks_from: from-github
+
     vars:
       APP_DIR: /home/roboshop/catalogue
       EXTRACT_DIR: /home/roboshop
