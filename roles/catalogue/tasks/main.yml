@@ -8,7 +8,7 @@
 
 - name: Add Roboshop User
   ansible.bultin.user:
-    name: roboshop
+    name: Robohsop
     comment: Roboshop Project User
 
 
