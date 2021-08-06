@@ -4,11 +4,11 @@
       - nodejs
       - make
       - gcc-c++
-      - state: Installed
+    state: installed
 
 - name: Add Roboshop User
   ansible.builtin.user:
-    name: robohsop
+    name: roboshop
     comment: Roboshop Project User
 
 
