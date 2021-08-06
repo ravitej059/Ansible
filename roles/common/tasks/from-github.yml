@@ -1,7 +1,4 @@
-- name: Remove old content
-  ansible.builtin.file:
-    path: "{{APP_DIR}}"
-    state: absent
+
 
 - name: Extract Package
   ansible.builtin.unarchive:
