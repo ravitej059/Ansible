@@ -18,11 +18,11 @@
     tasks_from: from-github
   vars:
     APP_DIR: /home/roboshop/{{COMPONENT}}/
-    EXTRACT_DIR: /tmp
+    EXTRACT_DIR: /tmp/
 
 - name: copy content to actual directory
   copy:
-    src: /tmp/{{COMPONENT}} -main/
+    src: /tmp/{{COMPONENT}}-main
     dest: /home/roboshop/{{COMPONENT}}/
     remote_src: yes
   become_user: roboshop
