@@ -27,3 +27,25 @@
     remote_src: yes
   become_user: roboshop
 
+- name: Download NodeJS Dependencies
+  community.genral.npm:
+    path: /home/roboshop/catalogue
+  become_user: roboshop
+
+
+- name: Copy SystemD file
+  copy:
+    src: systemd.service
+    dest: /etc/systemd/system/catalogue.service
+
+- name: Start  Mongodb Service
+  sysemd:
+    name: catalogue
+    state: restated
+    enabled: yes
+    demoan_reload: yes
+
+
+
+
+
