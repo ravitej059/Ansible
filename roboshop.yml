@@ -44,5 +44,5 @@
   tags:
     - user
   roles:
-    - name: Load REDIS Role
+    - name: Load user Role
       role: user
