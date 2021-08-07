@@ -36,3 +36,13 @@
   roles:
     - name: Load REDIS Role
       role: redis
+
+
+- name: Setup roboshop project -- User Component
+  hosts: USER
+  become: yes
+  tags:
+    - user
+  roles:
+    - name: Load REDIS Role
+      role: user

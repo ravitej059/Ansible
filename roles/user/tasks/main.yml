@@ -1,4 +1,4 @@
-- name: Print Component Name
-  debug:
-    msg:Componenet = Frontend
-    
+- name: Set up User
+  include_role:
+    name: common
+    tasks_from: nodejs
