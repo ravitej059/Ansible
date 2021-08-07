@@ -41,7 +41,7 @@
 - name: Start  Mongodb Service
   systemd:
     name: catalogue
-    state: restated
+    state: restarted
     enabled: yes
     demoan_reload: yes
 
