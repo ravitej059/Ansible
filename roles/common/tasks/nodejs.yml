@@ -22,8 +22,8 @@
 
 - name: copy content to actual directory
   copy:
-    src: /home/roboshop/{{COMPONENT}}/
-    dest: /home/roboshop/catalogue/
+    src: /home/roboshop/{{COMPONENT}}
+    dest: /home/roboshop/{{COMPONENT}}
     remote_src: yes
   become_user: roboshop
 
