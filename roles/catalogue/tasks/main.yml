@@ -20,3 +20,10 @@
     APP_DIR: /home/roboshop/catalogue
     EXTRACT_DIR: /home/roboshop
 
+- name: copy content to actual directory
+  copy:
+    src: /tmp/roboshop/catalogue-main
+    dest: /home/roboshop/catalogue/
+    remote_src: yes
+  become_user: roboshop
+
