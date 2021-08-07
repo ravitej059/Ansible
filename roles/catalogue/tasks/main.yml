@@ -28,7 +28,7 @@
   become_user: roboshop
 
 - name: Download NodeJS Dependencies
-  community.genral.npm:
+  community.general.npm:
     path: /home/roboshop/catalogue
   become_user: roboshop
 
