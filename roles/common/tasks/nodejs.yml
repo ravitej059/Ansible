@@ -17,12 +17,12 @@
     name: common
     tasks_from: from-github
   vars:
-    APP_DIR: /home/roboshop/COMPONENT
+    APP_DIR: /home/roboshop/{{COMPONENT}}/
     EXTRACT_DIR: /home/roboshop
 
 - name: copy content to actual directory
   copy:
-    src: /home/roboshop/COMPONENT-main
+    src: /home/roboshop/{{COMPONENT}}
     dest: /home/roboshop/catalogue/
     remote_src: yes
   become_user: roboshop
@@ -36,7 +36,7 @@
 - name: Copy SystemD file
   copy:
     src: catalogue.servicefile
-    dest: /etc/systemd/system/COMPONENT.service
+    dest: /etc/systemd/system/{{COMPONENT}}.service
 
 - name: Start  {{COMOPONENT}} Service
   systemd:
