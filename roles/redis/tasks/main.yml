@@ -1,4 +1,22 @@
-- name: Print Component Name
-  debug:
-    msg:Componenet = Frontend
-    
+- name: installing {{COMPONENT}} components
+  yum:
+    name: http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+    state: present
+
+- name: Enabling the Redis repo
+  yum:
+    name: redis
+    state: present
+    enablerepo: "remi"
+
+- name: Replacing & updating the Bind IP
+  replace:
+    path: /etc/redis/redis.conf
+    regexp: '127.0.0.1'
+    replace: '0.0.0.0'
+
+- name: Restart redis database
+  systemd:
+    name: redis
+    state: started
+    enabled: yes

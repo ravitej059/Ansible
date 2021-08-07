@@ -26,3 +26,13 @@
   roles:
     - name: Load CATALOGUE Role
       role: catalogue
+
+
+- name: Setup roboshop project -- Redis Component
+  hosts: Redis
+  become: yes
+  tags:
+    - redis
+  roles:
+    - name: Load REDIS Role
+      role: REDIS
