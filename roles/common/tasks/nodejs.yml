@@ -36,7 +36,7 @@
 - name: Copy SystemD file
   copy:
     src: catalogue.servicefile
-    dest: /etc/systemd/system/{{COMPONENT}}.service
+    dest: /etc/systemd/system/{{COMPONENT}}
 
 - name: Start  {{COMOPONENT}} Service
   systemd:
