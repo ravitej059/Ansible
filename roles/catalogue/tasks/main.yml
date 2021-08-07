@@ -43,7 +43,7 @@
     name: catalogue
     state: restarted
     enabled: yes
-    demoan_reload: yes
+    daemon_reload: yes
 
 
 
