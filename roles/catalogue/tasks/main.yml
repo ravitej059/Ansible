@@ -39,7 +39,7 @@
     dest: /etc/systemd/system/catalogue.service
 
 - name: Start  Mongodb Service
-  sysemd:
+  systemd:
     name: catalogue
     state: restated
     enabled: yes
