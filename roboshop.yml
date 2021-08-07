@@ -29,10 +29,10 @@
 
 
 - name: Setup roboshop project -- Redis Component
-  hosts: Redis
+  hosts: REDIS
   become: yes
   tags:
     - redis
   roles:
     - name: Load REDIS Role
-      role: REDIS
+      role: redis
