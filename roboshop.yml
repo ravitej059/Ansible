@@ -44,7 +44,7 @@
   tags:
     - user
   roles:
-    - name:  Load User Role
+    - name: Load User Role
       role: user
 
 
