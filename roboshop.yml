@@ -38,13 +38,13 @@
       role: redis
 
 
-- name: LOADING THE User
+- name: LOADING THE USER
   hosts: User
   become: yes
   tags:
     - user
   roles:
-    - name: Load User Role
+    - name: Load USER Role
       role: user
 
 
