@@ -38,14 +38,14 @@
       role: redis
 
 
-- name: Setup roboshop project -- User Component
+- name: LOADING THE USER
   hosts: USER
   become: yes
   tags:
-    - User
+    - user
   roles:
-    - name: Load User Role
-      role: User
+    - name: loading the user
+      role: user
 
 
 - name: Setup roboshop project -- Cart Component
