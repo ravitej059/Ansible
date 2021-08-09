@@ -46,3 +46,13 @@
   roles:
     - name: Load user Role
       role: user
+
+
+- name: Setup roboshop project -- Cart Component
+  hosts: CART
+  become: yes
+  tags:
+    - cart
+  roles:
+    - name: Load cart Role
+      role: cart
