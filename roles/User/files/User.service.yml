@@ -6,4 +6,4 @@ ExecStart=/bin/node /home/roboshop/user/server.js
 SyslogIdentifier=user
 
 [Install]
-WantedBy=multi-User.target
+WantedBy=multi-user.target
