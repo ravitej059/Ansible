@@ -42,10 +42,10 @@
   hosts: USER
   become: yes
   tags:
-    - user
+    - User
   roles:
     - name: Load User Role
-      role: user
+      role: User
 
 
 - name: Setup roboshop project -- Cart Component
