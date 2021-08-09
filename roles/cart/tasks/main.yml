@@ -1,4 +1,4 @@
-- name: Set up Cart
+- name: Set up cart
   include_role:
     name: common
     tasks_from: nodejs
