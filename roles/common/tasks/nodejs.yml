@@ -22,8 +22,8 @@
 
 - name: copy content to actual directory
   copy:
-    src: /tmp/{{COMPONENT}}- main/
-    dest: /home/roboshop/{{COMPONENT}}/
+    src: systemd.service
+    dest: /etc/systemd/system/{{COMPONENT}}.service
     remote_src: yes
   become_user: roboshop
 
