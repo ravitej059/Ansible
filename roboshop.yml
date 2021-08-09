@@ -39,7 +39,7 @@
 
 
 - name: LOADING THE User
-  hosts: USER
+  hosts: User
   become: yes
   tags:
     - user
