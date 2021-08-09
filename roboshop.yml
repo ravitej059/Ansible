@@ -38,7 +38,7 @@
       role: redis
 
 
-- name: LOADING THE USER
+- name: LOADING THE User
   hosts: USER
   become: yes
   tags:
